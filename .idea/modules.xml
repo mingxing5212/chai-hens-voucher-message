@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-api/chai-hens-voucher-message-api.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-api/chai-hens-voucher-message-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-app/chai-hens-voucher-message-app.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-app/chai-hens-voucher-message-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-data/chai-hens-voucher-message-data.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-data/chai-hens-voucher-message-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-parent/chai-hens-voucher-message-parent.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-parent/chai-hens-voucher-message-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-service/chai-hens-voucher-message-service.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-service/chai-hens-voucher-message-service.iml" />
+    </modules>
+  </component>
+</project>
