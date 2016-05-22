@@ -11,40 +11,32 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>me.mingxing5212</groupId>
-			<artifactId>chai-hens-voucher-data</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>me.mingxing5212</groupId>
-			<artifactId>chai-hens-voucher-api</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>de.alpharogroup</groupId>
-			<artifactId>jgeohash</artifactId>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-amqp</artifactId>
-		</dependency>
-
-		<dependency>
 			<groupId>org.apache.commons</groupId>
 			<artifactId>commons-lang3</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-eggs</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-voucher-message-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>me.mingxing5212</groupId>
+			<artifactId>chai-hens-voucher-message-wechat</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-redis</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.integration</groupId>
+			<artifactId>spring-integration-redis</artifactId>
 		</dependency>
 	</dependencies>
 </project>

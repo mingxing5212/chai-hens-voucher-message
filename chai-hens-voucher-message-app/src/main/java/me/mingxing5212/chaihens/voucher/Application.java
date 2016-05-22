@@ -9,7 +9,6 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication 
 @EnableAutoConfiguration(exclude = { VelocityAutoConfiguration.class })
-@MapperScan("me.mingxing5212.chaihens.voucher.data")
 @ImportResource({"classpath:dubbo-provider.xml"})
 public class Application {
 

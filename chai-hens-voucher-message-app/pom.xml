@@ -9,14 +9,6 @@
     </parent>
     <artifactId>chai-hens-voucher-message-app</artifactId>
     <dependencies>
-        <dependency>
-            <groupId>me.mingxing5212</groupId>
-            <artifactId>chai-hens-voucher-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>me.mingxing5212</groupId>
-            <artifactId>chai-hens-voucher-service</artifactId>
-        </dependency>
         <!-- 使用嵌入式Jetty作为Web应用服务器 -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -41,12 +33,12 @@
             <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
         </dependency>
         <dependency>
-            <groupId>me.mingxing5212</groupId>
-            <artifactId>chai-hens-voucher-data</artifactId>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
         </dependency>
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -59,6 +51,34 @@
         <dependency>
             <groupId>com.github.sgroschupf</groupId>
             <artifactId>zkclient</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.integration</groupId>
+            <artifactId>spring-integration-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>redis.clients</groupId>
+            <artifactId>jedis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>me.mingxing5212</groupId>
+            <artifactId>chai-hens-voucher-message-service</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
         </dependency>
     </dependencies>
 

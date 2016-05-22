@@ -8,6 +8,7 @@
       <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-data/chai-hens-voucher-message-data.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-data/chai-hens-voucher-message-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-parent/chai-hens-voucher-message-parent.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-parent/chai-hens-voucher-message-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-service/chai-hens-voucher-message-service.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-service/chai-hens-voucher-message-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chai-hens-voucher-message-wechat/chai-hens-voucher-message-wechat.iml" filepath="$PROJECT_DIR$/chai-hens-voucher-message-wechat/chai-hens-voucher-message-wechat.iml" />
     </modules>
   </component>
 </project>

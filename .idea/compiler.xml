@@ -26,6 +26,7 @@
         <module name="chai-hens-voucher-message-app" />
         <module name="chai-hens-voucher-message-data" />
         <module name="chai-hens-voucher-message-service" />
+        <module name="chai-hens-voucher-message-wechat" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -35,6 +36,7 @@
       <module name="chai-hens-voucher-message-data" target="1.5" />
       <module name="chai-hens-voucher-message-parent" target="1.5" />
       <module name="chai-hens-voucher-message-service" target="1.5" />
+      <module name="chai-hens-voucher-message-wechat" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

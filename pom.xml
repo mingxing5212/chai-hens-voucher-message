@@ -14,6 +14,7 @@
 		<module>chai-hens-voucher-message-app</module>
 		<module>chai-hens-voucher-message-data</module>
 		<module>chai-hens-voucher-message-service</module>
+		<module>chai-hens-voucher-message-wechat</module>
 	</modules>
     <build>
         <plugins>
