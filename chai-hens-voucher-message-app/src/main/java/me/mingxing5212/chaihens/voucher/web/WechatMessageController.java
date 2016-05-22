@@ -112,7 +112,7 @@ public class WechatMessageController extends WechatBaseController {
 
         }
         if (msgType.equals(MsgType.Event.toString())) {
-            if (inputMsg.getEvent().equals(EventType.SUBSCRIBE)) {
+            if (inputMsg.getEvent().equals(EventType.SUBSCRIBE.toString())) {
                 logger.info("用户微信号：" + inputMsg.getFromUserName());
             }
         }
