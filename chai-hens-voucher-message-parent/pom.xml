@@ -26,6 +26,7 @@
         <spring-data-redis-version>1.6.4.RELEASE</spring-data-redis-version>
         <spring-integration-redis-version>4.2.1.RELEASE</spring-integration-redis-version>
         <jedis-version>2.8.1</jedis-version>
+        <thoughtworks-version>1.4.8</thoughtworks-version>
     </properties>
 
     <dependencyManagement>
@@ -144,6 +145,11 @@
                 <groupId>redis.clients</groupId>
                 <artifactId>jedis</artifactId>
                 <version>${jedis-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.thoughtworks.xstream</groupId>
+                <artifactId>xstream</artifactId>
+                <version>${thoughtworks-version}</version>
             </dependency>
             <dependency>
                 <groupId>me.mingxing5212</groupId>
