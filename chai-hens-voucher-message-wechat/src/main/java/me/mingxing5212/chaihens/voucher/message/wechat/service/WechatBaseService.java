@@ -47,7 +47,8 @@ public abstract class WechatBaseService {
     }
 
     protected String assembleUrl(String originUrl, WeChatRequest wechatRequest) throws WeChatException {
-        return originUrl.replace("TOKEN", this.getAccessToken(wechatRequest.getAppId(), wechatRequest.getSecretKey()));
+        String token = this.getAccessToken(wechatRequest.getAppId(), wechatRequest.getSecretKey());
+        return originUrl.replace("ACCESS_TOKEN", token).replace("TOKEN", token);
     }
 
     private static final String ACCESS_TOKEN_GET_URL_FORMAT = "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid={0}&secret={1}";

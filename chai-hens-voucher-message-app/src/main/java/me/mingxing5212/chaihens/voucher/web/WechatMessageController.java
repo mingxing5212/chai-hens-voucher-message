@@ -22,9 +22,9 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping(value = "/wechat")
-public class WechatServerController extends WechatBaseController {
+public class WechatMessageController extends WechatBaseController {
 
-    private Logger logger = LoggerFactory.getLogger(WechatServerController.class);
+    private Logger logger = LoggerFactory.getLogger(WechatMessageController.class);
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
@@ -111,12 +111,9 @@ public class WechatServerController extends WechatBaseController {
 
         }
         if (msgType.equals(MsgType.Event.toString())) {
-            if (inputMsg.getEvent().equals("VIEW")) {
-                //TODO insert to customer, msg for front
+            if (inputMsg.getEvent().equals(EventType.SUBSCRIBE)) {
                 logger.info("用户微信号：" + inputMsg.getFromUserName());
             }
-
-
         }
     }
 }

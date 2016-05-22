@@ -6,11 +6,6 @@ import me.mingxing5212.chaihens.voucher.message.wechat.entity.event.EventType;
 
 import java.util.List;
 
-/**
- * 菜单按钮
- * @author Zhangxs
- * @version 2015-7-4
- */
 public class MenuButton {
 	private EventType type;//菜单的响应动作类型
 	private String name;//菜单标题，不超过16个字节，子菜单不超过40个字节
@@ -43,18 +38,22 @@ public class MenuButton {
 	public void setUrl(String url) {
 		this.url = url;
 	}
+
 	@JSONField(name="media_id")
 	public String getMediaId() {
 		return mediaId;
 	}
+
 	@JSONField(name="media_id")
 	public void setMediaId(String mediaId) {
 		this.mediaId = mediaId;
 	}
+
 	@JSONField(name="sub_button")
 	public List<MenuButton> getSubButton() {
 		return subButton;
 	}
+
 	@JSONField(name="sub_button")
 	public void setSubButton(List<MenuButton> subButton) {
 		this.subButton = subButton;
