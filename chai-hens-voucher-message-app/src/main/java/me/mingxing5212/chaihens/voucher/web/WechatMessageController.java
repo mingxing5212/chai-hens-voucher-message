@@ -69,6 +69,7 @@ public class WechatMessageController extends WechatBaseController {
         long createTime = inputMsg.getCreateTime();// 接收时间
         Long returnTime = Calendar.getInstance().getTimeInMillis() / 1000;// 返回时间
 
+        logger.info("解析来自微信的消息:{}.", inputMsg);
         // 取得消息类型
         String msgType = inputMsg.getMsgType();
         // 根据消息类型获取对应的消息内容
