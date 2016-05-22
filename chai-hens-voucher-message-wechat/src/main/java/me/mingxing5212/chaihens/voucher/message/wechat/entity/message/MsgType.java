@@ -10,4 +10,9 @@ public enum MsgType {
 	MsgType(String desc){
 		this.desc = desc;
 	}
+
+	@Override
+	public String toString() {
+		return desc;
+	}
 }

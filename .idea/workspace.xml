@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="26d189db-57cc-496a-bde6-ea4fe58f14eb" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/web/WechatMessageController.java" afterPath="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/web/WechatMessageController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java" afterPath="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="chai-hens-voucher-message.iws" />
@@ -90,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WechatMessageController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="WechatMessageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/web/WechatMessageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54545456">
-              <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="113" column="38" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -115,12 +115,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MsgType.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MsgType.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="11" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.44827586">
+              <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding>
+                <element signature="e#254#255#0" expanded="true" />
+                <element signature="e#272#273#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -174,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/configure/RabbitMQConfigurationProperties.java" />
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/configure/RedisConfigurationProperties.java" />
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/configure/RedisConfiguration.java" />
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/token/AccessToken.java" />
@@ -225,6 +227,7 @@
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/EventType.java" />
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/InputMessage.java" />
         <option value="$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/web/WechatMessageController.java" />
+        <option value="$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java" />
       </list>
     </option>
   </component>
@@ -655,12 +658,12 @@
       <workItem from="1462680385438" duration="1203000" />
       <workItem from="1463283553289" duration="9522000" />
       <workItem from="1463882028350" duration="8198000" />
-      <workItem from="1463911820497" duration="646000" />
+      <workItem from="1463911820497" duration="781000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57063000" />
+    <option name="totallyTimeSpent" value="57198000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1182,14 +1185,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="5" selection-start-line="4" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-app/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1230,10 +1225,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-app/src/main/java/me/mingxing5212/chaihens/voucher/web/WechatMessageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54545456">
-          <caret line="71" column="54" selection-start-line="71" selection-start-column="54" selection-end-line="71" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="113" column="38" selection-start-line="113" selection-start-column="38" selection-end-line="113" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chai-hens-voucher-message-wechat/src/main/java/me/mingxing5212/chaihens/voucher/message/wechat/entity/message/MsgType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.44827586">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#254#255#0" expanded="true" />
+            <element signature="e#272#273#0" expanded="true" />
           </folding>
         </state>
       </provider>
