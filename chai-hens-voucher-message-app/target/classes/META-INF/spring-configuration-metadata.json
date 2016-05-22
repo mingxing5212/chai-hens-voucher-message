@@ -71,24 +71,6 @@
       "defaultValue": 0
     },
     {
-      "name": "chaihens.voucher.web.thread-pool.idle-timeout",
-      "type": "java.lang.Integer",
-      "sourceType": "me.mingxing5212.chaihens.voucher.configure.WebConfigurationProperties$ThreadPool",
-      "defaultValue": 0
-    },
-    {
-      "name": "chaihens.voucher.web.thread-pool.max-threads",
-      "type": "java.lang.Integer",
-      "sourceType": "me.mingxing5212.chaihens.voucher.configure.WebConfigurationProperties$ThreadPool",
-      "defaultValue": 0
-    },
-    {
-      "name": "chaihens.voucher.web.thread-pool.min-threads",
-      "type": "java.lang.Integer",
-      "sourceType": "me.mingxing5212.chaihens.voucher.configure.WebConfigurationProperties$ThreadPool",
-      "defaultValue": 0
-    },
-    {
       "name": "logging.config",
       "type": "java.lang.String",
       "sourceType": "me.mingxing5212.chaihens.voucher.configure.LoggingProperties"

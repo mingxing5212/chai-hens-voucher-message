@@ -9,7 +9,7 @@ import org.springframework.context.annotation.ImportResource;
 
 @SpringBootApplication 
 @EnableAutoConfiguration(exclude = { VelocityAutoConfiguration.class })
-@ImportResource({"classpath:dubbo-provider.xml"})
+//@ImportResource({"classpath:dubbo-provider.xml"})
 public class Application {
 
     public static void main(String[] args) {

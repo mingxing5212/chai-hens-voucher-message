@@ -1,6 +1,5 @@
 package me.mingxing5212.chaihens.voucher.message.service.api.impl;
 
-import me.mingxing5212.chaihens.domain.card.CashCard;
 import me.mingxing5212.chaihens.domain.voucher.Voucher;
 import me.mingxing5212.chaihens.voucher.message.wechat.entity.card.CardDetailEntity;
 
@@ -14,7 +13,7 @@ public class VoucherConverter {
     public static Voucher convertToVoucher(CardDetailEntity cardDetailEntity){
         Voucher voucher = new Voucher();
         voucher.setId(cardDetailEntity.getCash().getBase_info().getId());
-        voucher.setTitle(cardDetailEntity.getCash().getBase_info().getTitle());
-        return cashCard;
+        voucher.setName(cardDetailEntity.getCash().getBase_info().getTitle());
+        return voucher;
     }
 }

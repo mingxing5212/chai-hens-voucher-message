@@ -40,10 +40,10 @@ public class WechatVoucherAPIImpl implements IWechatVoucherAPI {
             request1.setSecretKey("676da781f378ef3a1f747e078c385908");
             request1.setCard_id(response.getCard_id_list()[0]);
             CardDetailResponse cardDetailResponse = cardService.getCardDetail(request1);
-            cashCards.add(VoucherConverter.convertToCashCard(cardDetailResponse.getCard()));
+            //cashCards.add(cardDetailResponse.getCard());
         } catch (WeChatException e) {
             throw new ServiceException(e.getMessage());
         }
-        return cashCards;
+        return null;//cashCards;
     }
 }
