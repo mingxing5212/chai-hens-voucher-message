@@ -134,7 +134,8 @@ public class WechatMessageController extends WechatBaseController {
                 article.setUrl("http://www.cnblogs.com/haojiahong");
                 articleList.add(article);
                 newsMessage.setArticles(articleList);
-                messageService.bulidSendMessage(newsMessage, ConstantWeChat.RESP_MESSAGE_TYPE_NEWS);
+                String str = messageService.bulidSendMessage(newsMessage, ConstantWeChat.RESP_MESSAGE_TYPE_NEWS);
+                response.getWriter().write(str.toString());
                 logger.info("用户微信号：" + inputMsg.getFromUserName());
             }
         }
