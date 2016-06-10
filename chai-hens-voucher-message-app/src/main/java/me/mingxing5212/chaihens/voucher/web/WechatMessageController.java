@@ -1,9 +1,12 @@
 package me.mingxing5212.chaihens.voucher.web;
 
 import com.thoughtworks.xstream.XStream;
+import me.mingxing5212.chaihens.voucher.message.wechat.common.ConstantWeChat;
 import me.mingxing5212.chaihens.voucher.message.wechat.entity.message.*;
+import me.mingxing5212.chaihens.voucher.message.wechat.service.message.MessageService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,8 +14,10 @@ import javax.servlet.ServletInputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 /**
  * WechatServerController
@@ -25,6 +30,9 @@ import java.util.Date;
 public class WechatMessageController extends WechatBaseController {
 
     private Logger logger = LoggerFactory.getLogger(WechatMessageController.class);
+
+    @Autowired
+    private MessageService messageService;
 
     @RequestMapping(method = RequestMethod.GET)
     @ResponseBody
@@ -113,6 +121,20 @@ public class WechatMessageController extends WechatBaseController {
         }
         if (msgType.equals(MsgType.Event.toString())) {
             if (inputMsg.getEvent().equals(EventType.SUBSCRIBE.toString())) {
+                NewsMessage newsMessage = new NewsMessage();
+                newsMessage.setFromUserName("TYTG_SHUNYI");
+                newsMessage.setToUserName(inputMsg.getFromUserName());
+                newsMessage.setMsgType("news");
+                newsMessage.setArticleCount(1);
+                List<Article> articleList = new ArrayList<Article>();
+                Article article = new Article();
+                article.setTitle("haojiahong的博客");
+                article.setDescription("我不是高手，我不会武功。");
+                article.setPicUrl("http://pic.cnblogs.com/avatar/466668/20150530175722.png");
+                article.setUrl("http://www.cnblogs.com/haojiahong");
+                articleList.add(article);
+                newsMessage.setArticles(articleList);
+                messageService.bulidSendMessage(newsMessage, ConstantWeChat.RESP_MESSAGE_TYPE_NEWS);
                 logger.info("用户微信号：" + inputMsg.getFromUserName());
             }
         }

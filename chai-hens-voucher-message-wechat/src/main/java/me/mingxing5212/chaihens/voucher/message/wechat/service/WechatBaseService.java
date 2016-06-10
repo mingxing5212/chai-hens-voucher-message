@@ -36,6 +36,16 @@ public abstract class WechatBaseService {
         }
     }
 
+    protected  <T> T getForObject(String url, WeChatRequest wechatRequest, Class<T> responseType) throws WeChatException {
+        try {
+            T response = HttpClientUtils.getForObject(assembleUrl(url, wechatRequest), responseType);
+            return response;
+        } catch (Exception e) {
+            logger.error("调用微信API GET数据异常. API地址:{}. 异常原因:{}.", url, e.getMessage(), e);
+            throw new WeChatException("调用微信API获取数据异常!", e);
+        }
+    }
+
     protected  <T> T postForObject(String url, WeChatRequest wechatRequest, Class<T> responseType) throws WeChatException {
         try {
             T response = HttpClientUtils.postForObject(assembleUrl(url, wechatRequest), wechatRequest, responseType);
