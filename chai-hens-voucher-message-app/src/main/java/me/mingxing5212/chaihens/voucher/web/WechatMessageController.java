@@ -122,7 +122,7 @@ public class WechatMessageController extends WechatBaseController {
         if (msgType.equals(MsgType.Event.toString())) {
             if (inputMsg.getEvent().equals(EventType.SUBSCRIBE.toString())) {
                 NewsMessage newsMessage = new NewsMessage();
-                newsMessage.setFromUserName("TYTG_SHUNYI");
+                newsMessage.setFromUserName("gh_99b054103d1d");
                 newsMessage.setToUserName(inputMsg.getFromUserName());
                 newsMessage.setMsgType("news");
                 newsMessage.setArticleCount(1);
