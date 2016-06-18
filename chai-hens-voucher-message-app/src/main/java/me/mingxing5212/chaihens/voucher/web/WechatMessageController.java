@@ -128,8 +128,8 @@ public class WechatMessageController extends WechatBaseController {
                 newsMessage.setArticleCount(1);
                 List<Article> articleList = new ArrayList<Article>();
                 Article article = new Article();
-                article.setTitle("欢迎关注田园铁锅");
-                article.setDescription("关注田园铁锅,即可获取价值100元的代金券一张.");
+                article.setTitle("感谢关注田园铁锅");
+                article.setDescription("关注田园铁锅公众号可获取价值100元的代金券一张.");
                 article.setPicUrl("https://gss0.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/bainuo/wh%3D470%2C285/sign=8d3e50ef1a178a82ce6977a4c1335fbf/32fa828ba61ea8d3f207de27930a304e251f58ef.jpg");
                 article.setUrl("http://mp.weixin.qq.com/s?__biz=MzA5MTk2NjU0OQ==&mid=100000003&idx=1&sn=9eba22fbd77038d72476a060c4a411c5#rd");
                 articleList.add(article);

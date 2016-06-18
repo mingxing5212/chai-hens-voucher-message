@@ -9,28 +9,75 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.8</java.version>
-        <alibaba-fastjson-version>1.2.8</alibaba-fastjson-version>
         <logback-version>1.1.3</logback-version>
         <slf4j-version>1.7.18</slf4j-version>
+        <alibaba-fastjson-version>1.2.8</alibaba-fastjson-version>
         <apache-commons-lang3-version>3.4</apache-commons-lang3-version>
         <apache-commons-codec-version>1.10</apache-commons-codec-version>
+        <commons-collections-version>3.2.1</commons-collections-version>
+        <jackson-version>2.6.2</jackson-version>
+        <guava-version>18.0</guava-version>
+        <httpclient-version>4.5.1</httpclient-version>
+        <jgeohash-version>1.4.7</jgeohash-version>
+        <junit-version>4.12</junit-version>
+        <commons-io-version>2.4</commons-io-version>
+        <spring-boot-version>1.3.0.RELEASE</spring-boot-version>
+        <spring-framework-version>4.2.3.RELEASE</spring-framework-version>
+        <quartz-version>2.2.1</quartz-version>
         <servlet-api-version>3.1.0</servlet-api-version>
         <chaihens-common-version>1.0-SNAPSHOT</chaihens-common-version>
         <spring-boot-version>1.3.0.RELEASE</spring-boot-version>
-        <dubbo-version>2.5.3</dubbo-version>
-        <zookeeper-version>3.4.6</zookeeper-version>
-        <zkclient-version>0.1</zkclient-version>
-        <mybatis-version>3.3.0</mybatis-version>
-        <mybatis-spring-version>1.2.3</mybatis-spring-version>
-        <mybatis-spring-boot-version>1.0.1-SNAPSHOT</mybatis-spring-boot-version>
+        <sitemesh-version>3.0.1</sitemesh-version>
         <spring-data-redis-version>1.6.4.RELEASE</spring-data-redis-version>
         <spring-integration-redis-version>4.2.1.RELEASE</spring-integration-redis-version>
         <jedis-version>2.8.1</jedis-version>
         <thoughtworks-version>1.4.8</thoughtworks-version>
+        <javax-validation-version>1.1.0.Final</javax-validation-version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>javax.validation</groupId>
+                <artifactId>validation-api</artifactId>
+                <version>${javax-validation-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-lang3</artifactId>
+                <version>${apache-commons-lang3-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.quartz-scheduler</groupId>
+                <artifactId>quartz</artifactId>
+                <version>${quartz-version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>c3p0</groupId>
+                        <artifactId>c3p0</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>${guava-version}</version>
+            </dependency>
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
                 <groupId>org.springframework.boot</groupId>
@@ -46,14 +93,46 @@
                 </exclusions>
             </dependency>
             <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-starter-web</artifactId>
-                <version>${spring-boot-version}</version>
+                <groupId>org.springframework.security</groupId>
+                <artifactId>spring-security-core</artifactId>
+                <version>${spring-security-core-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${alibaba-fastjson-version}</version>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-framework-bom</artifactId>
+                <version>${spring-framework-version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring-framework-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.timgroup</groupId>
+                <artifactId>java-statsd-client</artifactId>
+                <version>${statsd-client-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>de.alpharogroup</groupId>
+                <artifactId>jgeohash</artifactId>
+                <version>${jgeohash-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.httpcomponents</groupId>
+                <artifactId>httpclient</artifactId>
+                <version>${httpclient-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-collections</groupId>
+                <artifactId>commons-collections</artifactId>
+                <version>${commons-collections-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-io</groupId>
+                <artifactId>commons-io</artifactId>
+                <version>${commons-io-version}</version>
             </dependency>
             <dependency>
                 <groupId>ch.qos.logback</groupId>
@@ -71,6 +150,16 @@
                 <version>${slf4j-version}</version>
             </dependency>
             <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${alibaba-fastjson-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.sitemesh</groupId>
+                <artifactId>sitemesh</artifactId>
+                <version>${sitemesh-version}</version>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
                 <version>${apache-commons-lang3-version}</version>
@@ -84,52 +173,6 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>javax.servlet-api</artifactId>
                 <version>${servlet-api-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo-version}</version>
-                <exclusions>
-                    <exclusion>
-                        <artifactId>spring</artifactId>
-                        <groupId>org.springframework</groupId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.zookeeper</groupId>
-                <artifactId>zookeeper</artifactId>
-                <version>${zookeeper-version}</version>
-                <exclusions>
-                    <exclusion>
-                        <groupId>log4j</groupId>
-                        <artifactId>log4j</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.slf4j</groupId>
-                        <artifactId>slf4j-log4j12</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-            <dependency>
-                <groupId>com.github.sgroschupf</groupId>
-                <artifactId>zkclient</artifactId>
-                <version>${zkclient-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis-spring-boot-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis</artifactId>
-                <version>${mybatis-version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>${mybatis-spring-version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework.data</groupId>
@@ -180,6 +223,17 @@
                 <groupId>dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>1.5.2</version>
+                <exclusions>
+                    <exclusion>
+                        <artifactId>pull-parser</artifactId>
+                        <groupId>pull-parser</groupId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>jstl</artifactId>
+                <version>1.2</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

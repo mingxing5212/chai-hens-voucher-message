@@ -2,6 +2,7 @@ package me.mingxing5212.chaihens.voucher.message.wechat.response;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -11,7 +12,7 @@ import java.sql.Timestamp;
  * @date 28/5/16
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserDetailGetResponse extends WeChatResponse {
+public class UserDetailGetResponse extends WeChatResponse implements Serializable {
 
     private Integer subscribe;
     private String openid;

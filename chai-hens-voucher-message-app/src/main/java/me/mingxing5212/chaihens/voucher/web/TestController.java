@@ -76,8 +76,9 @@ public class TestController {
     }
 
     @RequestMapping(method = RequestMethod.GET, value = "/batchuser")
-    public String testBatchUser(){
+    public List<UserDetailGetResponse> testBatchUser(){
 
+        List<UserDetailGetResponse> userDetailGetResponses = new ArrayList<UserDetailGetResponse>();
         UserBatchGetRequest request = new UserBatchGetRequest();
         request.setAppId("wxc9f477175d656d96");
         request.setSecretKey("676da781f378ef3a1f747e078c385908");
@@ -96,10 +97,10 @@ public class TestController {
             }
             userDetailBatchGetRequest.setUser_list(list);
             UserDetailBatchGetResponse userDetailBatchGetResponse = userService.getUserBatchDetail(userDetailBatchGetRequest);
-            List<UserDetailGetResponse> userDetailGetResponses = userDetailBatchGetResponse.getUser_info_list();
+            userDetailGetResponses = userDetailBatchGetResponse.getUser_info_list();
         } catch (WeChatException e) {
             e.printStackTrace();
         }
-        return "";
+        return userDetailGetResponses;
     }
 }

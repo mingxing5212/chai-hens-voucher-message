@@ -22,10 +22,3 @@ chaihens:
       maxWaitMillis: 10000
       testOnBorrow: true
       testOnReturn: true
-logging:
-  config: ./config/logback.xml
-spring:
-  mvc:
-    view:
-      prefix: /WEB-INF/jsp/
-      suffix: .jsp
